@@ -1,8 +1,9 @@
 Cuddlebys.AuctionController = Ember.ObjectController.extend({
-  // newLot: false,
-  //
-  // hideButton: function() {
-  //   this.set('newLot', true);
-  // },
+  notAddingLot: true,
 
+  actions: {
+    hideButton: function() {
+      this.set('notAddingLot', false);
+    }
+  }
 });

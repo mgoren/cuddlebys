@@ -1,23 +1,3 @@
-// Cuddlebys.NewLotController = Ember.Controller.extend({
-//   actions: {
-//     save: function() {
-//       var newLot = this.store.createRecord('lot',{
-//         name: this.get('name')
-//       });
-//       newLot.save();
-//
-//       debugger;
-//
-//       var controller = this;
-//       newLot.get('auction').then(function(auction) {
-//         auction.save();
-//       });
-//
-//
-//     }
-//   }
-// });
-
 Cuddlebys.NewLotController = Ember.Controller.extend({
   needs: ['auction'],
   actions: {
@@ -25,14 +5,18 @@ Cuddlebys.NewLotController = Ember.Controller.extend({
       var newLot = this.store.createRecord('lot', {
         name: this.get('name')
       });
+      this.set('name', null);
       newLot.save();
 
+      var auctionController = this.get('controllers.auction');
       var auction = this.get('controllers.auction.model');
-      
+
       auction.get('lots').pushObject(newLot);
       auction.save();
 
-      this.transitionToRoute('auction', auction.id);
+      auctionController.set('notAddingLot', true);
+
+      this.transitionToRoute('auction', auction);
     }
   }
 });
