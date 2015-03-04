@@ -1,0 +1,1 @@
+Cuddlebys = Ember.Application.create();
