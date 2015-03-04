@@ -2,7 +2,8 @@
 
 <ul>
   {{#each lot in model.lots}}
-    <li>{{lot.name}}</li>
+    <li>{{lot.name}} <i class="fa fa-times" {{action 'delete' lot}}></i></li>
+    <!-- {{lot.image}} -->
   {{/each}}
 </ul>
 

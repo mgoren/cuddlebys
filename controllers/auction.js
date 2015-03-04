@@ -4,6 +4,9 @@ Cuddlebys.AuctionController = Ember.ObjectController.extend({
   actions: {
     hideButton: function() {
       this.set('notAddingLot', false);
+    },
+    delete: function(lot) {
+      lot.destroyRecord();
     }
   }
 });
