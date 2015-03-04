@@ -1,0 +1,12 @@
+<h3>{{this.title}}</h3>
+
+<ul>
+  {{#each lot in this.lots}}
+    <li>{{lot.name}}</li>
+  {{/each}}
+</ul>
+
+{{outlet}}
+
+
+<p>{{#link-to 'new-lot' this class="btn btn-success"}}Add a new lot{{/link-to}}</p>

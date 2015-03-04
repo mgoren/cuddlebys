@@ -4,6 +4,7 @@
   <title>Cuddleby's</title>
 
   <link rel="stylesheet" href="styles/bootstrap.css">
+  <link rel="stylesheet" href="styles/styles.css">
 
   <script src="libs/jquery-1.11.1.js"></script>
   <script src="libs/ember-template-compiler-1.10.0.js"></script>
@@ -17,21 +18,18 @@
   <script src="router.js"></script>
 
   <script src="controllers/new-auction.js"></script>
-  <script src="controllers/auctions.js"></script>
-  <!-- // <script src="controllers/lots.js"></script> -->
-  <!-- // <script src="controllers/lot.js"></script> -->
+  <script src="controllers/new-lot.js"></script>
+  <script src="controllers/auction.js"></script>
 
   <script src="routes/auctions.js"></script>
-  <!-- // <script src="routes/lots.js"></script> -->
-  <!-- // <script src="routes/lot.js"></script> -->
+  <script src="routes/auction.js"></script>
 
-  <!-- // <script src="models/lot.js"></script> -->
   <script src="models/auction.js"></script>
   <script src="models/lot.js"></script>
 
   <script>
     EmberHandlebarsLoader.loadTemplates([
-      'application', 'auctions', 'new-auction']);
+      'application', 'auctions', 'new-auction', 'new-lot', 'auction']);
   </script>
 </head>
 <body>

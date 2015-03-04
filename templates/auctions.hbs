@@ -1,6 +1,7 @@
 <h4>Auctions</h4>
 <ul>
   {{#each auction in model}}
-    <li>{{auction.title}}</li>
+    <li>{{#link-to 'auction' auction}}{{auction.title}}{{/link-to}}</li>
   {{/each}}
 </ul>
+{{#link-to 'new-auction' classNames="btn btn-primary"}}New auction{{/link-to}}
