@@ -1,11 +1,17 @@
 <h3>{{model.title}}</h3>
 
-<ul>
+<div class="row">
   {{#each lot in model.lots}}
-    <li>{{lot.name}} <i class="fa fa-times" {{action 'delete' lot}}></i></li>
-    <!-- {{lot.image}} -->
+    <!-- <li>{{lot.name}} <i class="fa fa-times" {{action 'delete' lot}}></i></li> -->
+
+    <figure class="well">
+      <img {{bind-attr src=lot.image}}>
+      <figcaption>{{lot.name}}</figcaption>
+    </figure>
+
   {{/each}}
-</ul>
+</div>
+
 
 {{outlet}}
 

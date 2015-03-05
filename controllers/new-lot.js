@@ -3,9 +3,11 @@ Cuddlebys.NewLotController = Ember.Controller.extend({
   actions: {
     save: function() {
       var newLot = this.store.createRecord('lot', {
-        name: this.get('name')
+        name: this.get('name'),
+        image: this.get('image')
       });
       this.set('name', null);
+      this.set('image', null);
       newLot.save();
 
       var auctionController = this.get('controllers.auction');
