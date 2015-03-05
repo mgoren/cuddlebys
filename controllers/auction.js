@@ -7,6 +7,11 @@ Cuddlebys.AuctionController = Ember.ObjectController.extend({
     },
     delete: function(lot) {
       lot.destroyRecord();
+    },
+    callLightbox: function(lot) {
+      // debugger;
+      this.set('currentLot', lot)
+      $("#myModal").modal('show');
     }
   }
 });

@@ -1,32 +1,93 @@
+body {
+  background-color: white;
+}
+
 .container {
-  width: 100%;
+  background-color: #3A175B;
+  width: 75%;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
 }
 
 .navbar {
   margin-bottom: 0;
 }
 
+.jumbotron {
+  margin-top: 1em;
+}
+
 h1 {
   margin: 0;
+  font-size: 56px !important;
+}
+
+h3 {
+  color: white;
 }
 
 figure {
   display: inline-block;
   margin: 15px;
-  width: 400px;
-  height: 400px;
+  width: 250px;
+  height: 250px;
   vertical-align: top;
   text-align: center;
 }
 
 figure figcaption {
-  font-size: 20px;
-  border: 1px solid;
-  width: 350px;
+  font-size: 16px;
+  width: 200px;
   margin: auto;
+  margin-top: -30px;
+  color: white;
+  text-shadow: 2px 2px 2px #000;
+  display: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -moz-transition: opacity 0.3s ease-out;
+  -ms-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+
+figure:hover figcaption {
+  display: block;
+  opacity: 1;
 }
 
 figure img {
-  width: 350px;
-  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.modal-header, .modal-footer {
+  border: none;
+}
+
+.modal-title {
+  font-size: 24px;
+}
+
+.modal-body {
+  text-align: center;
+  padding: 0;
+}
+
+.modal-body img {
+  width: 100%;
+}
+
+.modal-content {
+  border: white 3px solid;
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.well {
+  background-color: rgba(227, 227, 227, 0.8);
+  border: none;
 }

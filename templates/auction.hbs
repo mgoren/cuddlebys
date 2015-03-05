@@ -2,19 +2,33 @@
 
 <div class="row">
   {{#each lot in model.lots}}
-    <!-- <li>{{lot.name}} <i class="fa fa-times" {{action 'delete' lot}}></i></li> -->
-
-    <figure class="well">
+    <figure class="well" {{action 'callLightbox' lot}}>
       <img {{bind-attr src=lot.image}}>
       <figcaption>{{lot.name}}</figcaption>
     </figure>
-
   {{/each}}
+  <div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">{{currentLot.name}}</h4>
+        </div>
+        <div class="modal-body">
+          <img {{bind-attr src=currentLot.image}}>
+        </div>
+        <div class="modal-footer">
+          
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 
 {{outlet}}
 
+<hr>
 {{#if notAddingLot}}
-<p {{action 'hideButton'}}>{{#link-to 'new-lot' this class="btn btn-success"}}Add a new lot{{/link-to}}</p>
+<p {{action 'hideButton'}}>{{#link-to 'new-lot' this class="btn btn-default btn-xs"}}Add a new lot{{/link-to}}</p>
 {{/if}}
