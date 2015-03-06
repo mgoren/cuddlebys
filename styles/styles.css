@@ -10,12 +10,47 @@ body {
 
 }
 
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.fa-plus {
+  font-size: 16px;
+  color: white;
+}
+
+.fa-plus:hover {
+  color: gray;
+}
+
 .navbar {
   margin-bottom: 0;
 }
 
 .jumbotron {
   margin-top: 1em;
+  padding: 20px !important;
+}
+
+
+.carousel {
+  margin-bottom: 30px;
+}
+
+.carousel-inner {
+  margin: auto;
+  text-align: center;
+  max-height: 300px;
+}
+
+.carousel-inner .item img {
+  display: inline;
+  max-height: 250px;
+}
+
+.carousel-caption {
+  padding: 0;
 }
 
 h1 {
@@ -25,6 +60,20 @@ h1 {
 
 h3 {
   color: white;
+}
+
+label {
+  display: none;
+}
+
+form {
+  border: white 3px solid;
+  padding: 15px;
+  margin: 15px;
+}
+
+.form-group {
+  margin: 10px 0;
 }
 
 figure {

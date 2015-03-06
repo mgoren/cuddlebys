@@ -1,7 +1,39 @@
-<h4>Auctions</h4>
+<div id="carousel-example-generic" class="carousel slide" data-interval="3000" data-ride="carousel">
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="http://mortalwombat.net/cuddlebys/shrew.jpeg">
+      <div class="carousel-caption">
+        <h3>Featured Creatures</h3>
+      </div>
+    </div>
+    {{#each auction in model}}
+      <div class="item">
+        <img {{bind-attr src=auction.firstImage}}>
+        <div class="carousel-caption">
+          <h3>{{auction.title}}</h3>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<h3>Auctions {{#link-to 'new-auction'}}<i class="fa fa-plus"></i>{{/link-to}}</h3>
+
 <ul>
   {{#each auction in model}}
     <li>{{#link-to 'auction' auction}}{{auction.title}}{{/link-to}}</li>
   {{/each}}
 </ul>
-{{#link-to 'new-auction' classNames="btn btn-primary"}}New auction{{/link-to}}
+{{outlet}}

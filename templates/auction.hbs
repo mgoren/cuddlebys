@@ -1,4 +1,4 @@
-<h3>{{model.title}}</h3>
+<h3>{{model.title}} {{#link-to 'new-lot'}}<i class="fa fa-plus"></i>{{/link-to}}</h3>
 
 <div class="row">
   {{#each lot in model.lots}}
@@ -18,7 +18,7 @@
           <img {{bind-attr src=currentLot.image}}>
         </div>
         <div class="modal-footer">
-          
+
         </div>
       </div>
     </div>
@@ -28,7 +28,7 @@
 
 {{outlet}}
 
-<hr>
+<!-- <hr>
 {{#if notAddingLot}}
 <p {{action 'hideButton'}}>{{#link-to 'new-lot' this class="btn btn-default btn-xs"}}Add a new lot{{/link-to}}</p>
-{{/if}}
+{{/if}} -->
