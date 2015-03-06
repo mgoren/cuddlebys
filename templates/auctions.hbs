@@ -10,10 +10,12 @@
     </div>
     {{#each auction in model}}
       <div class="item">
-        <img {{bind-attr src=auction.firstImage}}>
-        <div class="carousel-caption">
-          <h3>{{auction.title}}</h3>
-        </div>
+        {{#link-to 'auction' auction}}
+          <img {{bind-attr src=auction.firstImage}}>
+          <div class="carousel-caption">
+            <h3>{{auction.title}}</h3>
+          </div>
+        {{/link-to}}
       </div>
     {{/each}}
   </div>

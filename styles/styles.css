@@ -46,6 +46,8 @@ ul {
 
 .carousel-inner .item img {
   display: inline;
+  text-align: center;
+  margin: auto;
   max-height: 250px;
 }
 
